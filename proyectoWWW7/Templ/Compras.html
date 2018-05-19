@@ -1,0 +1,156 @@
+<header>
+	<nav class="light-blue lighten-1" role="navigation">
+		<div class="nav-wrapper container">
+
+			<a id="logo-container" href="#" class="brand-logo">TEXTIL.COM</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<!--<li><a href="#!config"><i class="material-icons left">add_circle</i>Agregar</a></li>
+				<li><a href="#!registrarProveedor"><i class="material-icons left">assignment_ind</i>Proveedor</a></li>
+				<li><a href="#!registrarProducto"><i class="material-icons left">find_in_page</i>Producto</a></li>-->
+				<li><a href="#!Vendedor"><i class="material-icons left">note_add</i>Productos</a></li>
+				<li><a href="index.html"><i class="material-icons left">highlight_off</i>Cerrar</a></li>
+				<!--<li><a class="dropdowm-trigger" data-target="dropdown1" href="#"><i class="material-icons left">menu</i>Menu</a></li>-->
+			</ul>
+
+				<!--menu responsi-->
+			<ul id="nav-mobile" class="sidenav">
+				<li>
+					<div class="user-view">
+					      <div class="background">
+					        <img src="image/portada1.jpg">
+					      </div>
+					      <!--<a href="#user"><img class="circle" src="image/tela1.jpg"></a>-->
+					      <!--<a href="#name"><span class="white-text name">John Doe</span></a>-->
+					      <br><br>
+					      
+				    </div>
+				</li>
+					<li><a class="subheader">MENU</a></li>
+					<li><a href="#!"><i class="material-icons left">account_circle</i>Usuario</a></li>
+					<li><a href="#!config"><i class="material-icons left">add_circle</i>Agregar</a></li>
+					<li><a href="#!registrarProveedor"><i class="material-icons left">assignment_ind</i>Proveedor</a></li>
+					<li><a href="#!registrarProducto"><i class="material-icons left">find_in_page</i>Producto</a></li>
+					<li><a href="#!registroCompras"><i class="material-icons left">add_shopping_cart</i>Compras</a></li>
+					<!--<li><a class="dropdowm-trigger" data-target="dropdown1" href="#"><i class="material-icons left">menu</i>Menu</a></li>-->				
+					<li><a href="index.html"><i class="material-icons left">home</i>Inicio</a></li>
+            </ul>
+
+			     <!--boton del menu responsi-->
+      		<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      			<!--fin boton del menu responsi-->
+      		<!--fin del menu responsi-->
+		</div>
+	</nav>
+</header>
+<!--fin de la cabezera-->
+
+<!--seccion principal-->
+<section>
+	<!--cabezera de la sesion principal-->
+	<header>
+		<div class="section no-pad-bot" id="index-banner">
+			<div class="container">
+				<h1 class="header center blue-text text-lighten-1 ">Textiles.com</h1>
+				<div class=" center">
+				<h5 class="header center "> </h5>
+				</div>
+				<br><br>
+			</div>
+		</div>
+	</header>
+	<!--fin de la cabezera sesion principal-->
+
+<article>
+<div class="container">
+<div class="section">
+
+	<!--formulario-->
+	  <form class="row">
+	    <form class="col s12 ">
+	      <div class="row">
+	       <div class="col s2">
+	       	<br>
+			    <select class="browser-default" ng-model="nuevacompraa.id">
+			      <option value="" disabled selected>ID proveedor</option>
+			      <option value="1">1</option>
+			      <option value="2">2</option>
+			      <option value="3">3</option>
+			    </select>
+			    
+			</div>
+	        <div class="input-field col s5">
+	          <input  id="NomVendedor" type="text" class="validate" ng-model="nuevacompraa.title">
+	          <label for="NomVendedor">Nombre del Vendedor</label>  
+	        </div>
+	        <div class="input-field col s5">
+	          <input  id="last_name" type="text" class="validate" ng-model="nuevacompraa.userId">
+	          <label for="last_name">Nombre del Cliente</label>
+	        </div>
+	      </div>
+	      <div class="row col s2">
+	      	<div class="input-field col s5">
+	          <input  id="Num" type="integer" class="validate" ng-model="numero"> 
+	      	</div>
+	      </div>
+
+
+	    </form>
+    </form>
+    <!--fin formulario-->
+
+		<!--botones-->
+		<div class=" row ">
+			 
+  			<div class="input-field col l2 s12">
+  				<button ng-click="addPost()" class="waves-effect blue btn">Agregar</button>
+  			</div>
+  			<div class="input-field col l2 s12 ">
+  				<button ng-click="editar()" class="waves-effect blue btn">Actulizar</button>
+  			</div>      				
+				
+		</div>
+		<br><br>
+		<!--fin de los botones-->
+
+
+	<!--tabla de compra de los productos-->
+	<table class="responsive-table striped highlight col s12">
+        <thead>
+          <tr>
+              <th>Codigo</th>
+              <th>Nombre del Producto</th>
+              <th>Cantidad</th>
+              <th>Precio</th>
+              <th>Encargos</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr ng-repeat="compra in compraa">
+	            <td>{{compra.id}}</td>
+	            <td>{{compra.title}}</td>
+	            <td>{{compra.id}}</td>
+	            <td>{{compra.id}}</td>
+	            <td>{{compra.id}}</td>
+          </tr>
+        </tbody>
+		</table>
+		<br><br>
+		<!-- fin de la tabla-->
+
+		<!--botones-->
+		<div class=" row ">
+			<div class="col s12 "> 
+  			<div class="input-field col l2 s12">
+  				<a class="waves-effect blue btn">Compra</a>      				
+  			</div>
+  			<div class="input-field col l2 s12">
+  				<a class="waves-effect blue btn">Cancelar</a>      				
+  			</div>      				
+			</div>  			
+		</div>
+		<br><br>
+		<!--fin de los botones-->
+</div>						
+</div>
+</article>

@@ -1,0 +1,127 @@
+<header>
+	<nav class="light-blue lighten-1" role="navigation">
+		<div class="nav-wrapper container">
+
+			<a id="logo-container" href="#" class="brand-logo">TEXTIL.COM</a>
+			<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a href="#!registrarProducto"><i class="material-icons left">find_in_page</i>Producto</a></li>
+				<li><a href="index.html"><i class="material-icons left">highlight_off</i>Cerrar</a></li>
+				<!--<li><a class="dropdowm-trigger" data-target="dropdown1" href="#"><i class="material-icons left">menu</i>Menu</a></li>-->
+			</ul>
+
+				<!--menu responsi-->
+			<ul id="nav-mobile" class="sidenav">
+				<li>
+					<div class="user-view">
+					      <div class="background">
+					        <img src="image/portada1.jpg">
+					      </div>
+					      <!--<a href="#user"><img class="circle" src="image/tela1.jpg"></a>-->
+					      <!--<a href="#name"><span class="white-text name">John Doe</span></a>-->
+					      <br><br>
+					      
+				    </div>
+				</li>
+					<li><a class="subheader">MENU</a></li>
+					<li><a href="Login.html"><i class="material-icons left">account_circle</i>Usuario</a></li>
+					<li><a href="#!config"><i class="material-icons left">add_circle</i>Agregar</a></li>
+					<li><a href="#!registrarProveedor"><i class="material-icons left">assignment_ind</i>Proveedor</a></li>
+					<li><a href="#!registrarProducto"><i class="material-icons left">find_in_page</i>Producto</a></li>
+					<li><a href="#!registroCompras"><i class="material-icons left">add_shopping_cart</i>Compras</a></li>
+					<!--<li><a class="dropdowm-trigger" data-target="dropdown1" href="#"><i class="material-icons left">menu</i>Menu</a></li>-->				
+					<li><a href="index.html"><i class="material-icons left">home</i>Inicio</a></li>
+            </ul>
+
+			     <!--boton del menu responsi-->
+      		<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      			<!--fin boton del menu responsi-->
+      		<!--fin del menu responsi-->
+		</div>
+	</nav>
+</header>
+<!--fin de la cabezera-->
+
+<!--seccion principal-->
+<section>
+	<!--cabezera de la sesion principal-->
+	<header>
+		<div class="section no-pad-bot" id="index-banner">
+			<div class="container">
+				<h1 class="header center blue-text text-lighten-1 ">Textiles.com</h1>
+				<div class=" center">
+				<h5 class="header center "> </h5>
+				</div>
+				<br><br>
+			</div>
+		</div>
+	</header>
+	<!--fin de la cabezera sesion principal-->
+
+<h4 class="header center ">PROVEEDORES</h4>
+		<article>
+		<div class="container">
+		<div class="section">
+
+			<!--formulario-->
+            <form class="row">
+				<div class="input-field col l5 s12">
+					 <i class="material-icons prefix">mode_edit</i>
+					 <input  id="idProduc" type="number" class="validate" ng-model="rProveedor.id">
+			         <label for="idProduc">cc</label>
+			         <span class="helper-text" data-error="wrong" data-success="">Helper text</span>
+				</div>
+				<div class="col l2 s12"></div>
+
+				<div class="input-field col l5 s12">
+					<i class="material-icons prefix">account_circle</i>
+					 <input  id="nombreProve" type="text" class="validate" ng-model="rProveedor.title">
+			        <label for="nombreProve">Nombre</label>
+			         <span class="helper-text" data-error="wrong" data-success="">Helper text</span>
+				</div>
+			</form>
+
+            <div class=" row ">
+            	<div class="input-field col l2 s12 right">
+					<a class="waves-effect blue btn">Modificar</a> 
+				</div>	
+      			<div class="input-field col l2 s12 right">
+					<a class="waves-effect blue btn" ng-click="Consultar()">Consultar</a>
+				</div>
+				<div class="input-field col l2 s12 right">
+					 <a class="waves-effect blue btn" ng-click="Registrar()">Registrar</a> 
+				</div>
+			</div>
+      		
+      	
+      		<br>
+            <!--fin formulario-->
+
+			<!--tabla de proveedor-->
+			<table class="responsive-table striped highlight" ng-show="formVisibility">
+		        <thead>
+		          <tr>
+		              <th>id</th>
+		              <th>Nombre</th>
+		              <th>cc</th>
+		          </tr>
+		        </thead>
+
+		        <tbody >
+		          <tr ng-repeat="provee in proveedor">
+			            <td>{{provee.userId}}</td>
+			            <td>{{provee.title}}</td>
+			            <td>{{provee.id}}</td>
+		          </tr>		         
+		        </tbody>
+      		</table>
+      		<br><br>
+      		<!--fin de la tabla-->
+
+  		
+
+		</div>						
+		</div>
+		</article>
+				
+
+	<!--fin de la seccion principal--> 
